@@ -1,11 +1,14 @@
 class Test {
-    public readonly color: string = 'orange';
+   color: string = 'orange';
+   private _intensity: number = 5;
 
-    constructor(myColor) {
-        this.color = myColor;
-    }
+   get intensity(): number {
+      return this._intensity;
+   }
+
+
 }
 
-const mytest = new Test("blue");
+const mytest = new Test();
 
-alert(mytest.color);
+alert(mytest.intensity);
