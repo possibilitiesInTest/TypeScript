@@ -49,3 +49,65 @@ const Chocolate = new Inventory();
 alert(Chocolate.qty);
 Chocolate.qty = 5
 alert(Chocolate.qty);
+
+// You do not need to instantiate an obj
+// to use its static class methods
+// STATIC properties and methods are not passed into
+// instantiated objects
+// must be called directly from the class
+
+
+/// Grandchild extends parent classes, which extends grandparent
+
+class Parent {
+   constructor(public name: string, public city: string) {}
+
+}
+
+class Child extends Parent {
+   constructor(
+       myname: string,
+       mycity: string,
+       public street: string) {
+      super(myname, mycity);
+   }
+
+}
+
+class Grandchild extends Child {
+   constructor(
+       myname: string,
+       mycity: string,
+       street: string,
+       public apartment: string) {
+      super(myname, mycity, street);
+   }
+
+}
+
+const test = new Grandchild ("Tony", "New York", "Main Street", "First Floor");
+alert(`${test.name} from ${test.city} on ${test.street} on ${test.apartment}`)
+
+// grandchild class implementing intergace from parent, grandparent
+
+interface IParent {
+   name: string;
+   city: string;
+}
+
+interface IChild {
+   street: string;
+}
+
+class Grandchild implements IParent, IChild {
+   constructor(
+       public name: string,
+       public city: string,
+       public street: string,
+       public apartment: string) { }
+}
+
+const tony = new Grandchild(
+    "Tony", "New York", "Main Street", "First Floor"
+)
+alert(`${tony.city} on ${tony.street} on ${tony.apartment}`);
