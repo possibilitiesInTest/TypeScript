@@ -59,12 +59,12 @@ alert(Chocolate.qty);
 
 /// Grandchild extends parent classes, which extends grandparent
 
-class Parent {
+class Parent2 {
    constructor(public name: string, public city: string) {}
 
 }
 
-class Child extends Parent {
+class Child2 extends Parent2 {
    constructor(
        myname: string,
        mycity: string,
@@ -74,7 +74,7 @@ class Child extends Parent {
 
 }
 
-class Grandchild extends Child {
+class Grandchild2 extends Child2 {
    constructor(
        myname: string,
        mycity: string,
@@ -85,7 +85,7 @@ class Grandchild extends Child {
 
 }
 
-const test = new Grandchild ("Tony", "New York", "Main Street", "First Floor");
+const test = new Grandchild2 ("Tony", "New York", "Main Street", "First Floor");
 alert(`${test.name} from ${test.city} on ${test.street} on ${test.apartment}`)
 
 // grandchild class implementing intergace from parent, grandparent
@@ -111,3 +111,28 @@ const tony = new Grandchild(
     "Tony", "New York", "Main Street", "First Floor"
 )
 alert(`${tony.city} on ${tony.street} on ${tony.apartment}`);
+
+// abstract classes prevent instantiation
+
+abstract class Parent3 {
+   constructor(private _name: string, public city: string) { }
+   get name() {
+      return this._name[0].toUpperCase()
+          + this._name.substr(1).toLowerCase();
+   }
+}
+
+class Child3 extends Parent3 {
+   constructor(
+       myname: string,
+       mycity: string,
+       public street: string
+   ) {
+      super(myname, mycity);
+   }
+}
+
+const writer = new Child3("tony", "New York", "Main Street");
+alert(writer.name);
+
+const poet = new Parent3("Zayra", "San Francisco");
