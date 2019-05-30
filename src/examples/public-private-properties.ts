@@ -136,3 +136,30 @@ const writer = new Child3("tony", "New York", "Main Street");
 alert(writer.name);
 
 const poet = new Parent3("Zayra", "San Francisco");
+
+// private constructors control the instantiation of its objects
+
+class Singleton {
+
+   private static instance: Singleton;
+   private constructor() { }
+
+   static getInstance() {
+      if (!Singleton.instance) {
+         Singleton.instance = new Singleton();
+         // if singleton object does not exist
+         // instantiate first object
+      }
+      return Singleton.instance;
+      // if singleton object exists
+      // variable { } becomes pointer to
+      // existing object
+      // no second object is created
+   }
+   luckyNumber: number;
+}
+
+let v = Singleton.getInstance();
+let z = Singleton.getInstance();
+v.luckyNumber = 33;
+alert(z.luckyNumber);
