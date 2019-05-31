@@ -259,4 +259,17 @@ alert(`you said "${z2 + 100}"`);
 let y3 = parseFloat(prompt("Please enter a number"));
 alert(y3 + 100);
 
+///////////////////////
+
+const myObject = {
+    name: "Tony",
+    age: 99
+}
+
+// alert(myObject) // object Object
+
+let myString = JSON.stringify(myObject, null);
+// stringify: data, filter, amount of space for each element
+
+alert(myString);
 
