@@ -1,14 +1,14 @@
 class Test {
-   color: string = 'orange';
-   private _intensity: number = 5;
+    color: string = 'orange';
+    private _intensity: number = 5;
 
-   get intensity(): number {
-      return this._intensity;
-   }
+    get intensity(): number {
+        return this._intensity;
+    }
 
-   set intensity(x: number) {
-    this._intensity = x;
-   }
+    set intensity(x: number) {
+        this._intensity = x;
+    }
 
 
 }
@@ -32,17 +32,17 @@ alert(mytest.intensity);
 //       -change _qty val of chocolat to 5
 
 class Inventory {
-   item: string;
-   private _qty: number = 0;
-   prive: number;
+    item: string;
+    private _qty: number = 0;
+    prive: number;
 
-   get qty(): number{
-     return this._qty;
-   };
+    get qty(): number{
+        return this._qty;
+    };
 
-   set qty(x: number) {
-      this._qty = x;
-   }
+    set qty(x: number) {
+        this._qty = x;
+    }
 }
 
 const Chocolate = new Inventory();
@@ -60,28 +60,28 @@ alert(Chocolate.qty);
 /// Grandchild extends parent classes, which extends grandparent
 
 class Parent2 {
-   constructor(public name: string, public city: string) {}
+    constructor(public name: string, public city: string) {}
 
 }
 
 class Child2 extends Parent2 {
-   constructor(
-       myname: string,
-       mycity: string,
-       public street: string) {
-      super(myname, mycity);
-   }
+    constructor(
+        myname: string,
+        mycity: string,
+        public street: string) {
+        super(myname, mycity);
+    }
 
 }
 
 class Grandchild2 extends Child2 {
-   constructor(
-       myname: string,
-       mycity: string,
-       street: string,
-       public apartment: string) {
-      super(myname, mycity, street);
-   }
+    constructor(
+        myname: string,
+        mycity: string,
+        street: string,
+        public apartment: string) {
+        super(myname, mycity, street);
+    }
 
 }
 
@@ -91,20 +91,20 @@ alert(`${test.name} from ${test.city} on ${test.street} on ${test.apartment}`)
 // grandchild class implementing intergace from parent, grandparent
 
 interface IParent {
-   name: string;
-   city: string;
+    name: string;
+    city: string;
 }
 
 interface IChild {
-   street: string;
+    street: string;
 }
 
 class Grandchild implements IParent, IChild {
-   constructor(
-       public name: string,
-       public city: string,
-       public street: string,
-       public apartment: string) { }
+    constructor(
+        public name: string,
+        public city: string,
+        public street: string,
+        public apartment: string) { }
 }
 
 const tony = new Grandchild(
@@ -115,21 +115,21 @@ alert(`${tony.city} on ${tony.street} on ${tony.apartment}`);
 // abstract classes prevent instantiation
 
 abstract class Parent3 {
-   constructor(private _name: string, public city: string) { }
-   get name() {
-      return this._name[0].toUpperCase()
-          + this._name.substr(1).toLowerCase();
-   }
+    constructor(private _name: string, public city: string) { }
+    get name() {
+        return this._name[0].toUpperCase()
+            + this._name.substr(1).toLowerCase();
+    }
 }
 
 class Child3 extends Parent3 {
-   constructor(
-       myname: string,
-       mycity: string,
-       public street: string
-   ) {
-      super(myname, mycity);
-   }
+    constructor(
+        myname: string,
+        mycity: string,
+        public street: string
+    ) {
+        super(myname, mycity);
+    }
 }
 
 const writer = new Child3("tony", "New York", "Main Street");
@@ -141,22 +141,22 @@ const poet = new Parent3("Zayra", "San Francisco");
 
 class Singleton {
 
-   private static instance: Singleton;
-   private constructor() { }
+    private static instance: Singleton;
+    private constructor() { }
 
-   static getInstance() {
-      if (!Singleton.instance) {
-         Singleton.instance = new Singleton();
-         // if singleton object does not exist
-         // instantiate first object
-      }
-      return Singleton.instance;
-      // if singleton object exists
-      // variable { } becomes pointer to
-      // existing object
-      // no second object is created
-   }
-   luckyNumber: number;
+    static getInstance() {
+        if (!Singleton.instance) {
+            Singleton.instance = new Singleton();
+            // if singleton object does not exist
+            // instantiate first object
+        }
+        return Singleton.instance;
+        // if singleton object exists
+        // variable { } becomes pointer to
+        // existing object
+        // no second object is created
+    }
+    luckyNumber: number;
 }
 
 let v = Singleton.getInstance();
@@ -172,27 +172,27 @@ alert(z.luckyNumber);
 let myArr = [55, 65, 75, 85];
 
 for (let item of myArr) {
-   console.log(item); // 55, 65, 75, 85
+    console.log(item); // 55, 65, 75, 85
 }
 
 // for of => values of array constructor
 
 for (let item in myArr) {
-   console.log(item); // 0, 1, 2, 3
+    console.log(item); // 0, 1, 2, 3
 }
 
 // for in => indexes/keys/methods in an array
 
 let myObj = {
-   name: "tony",
-   age: 99
+    name: "tony",
+    age: 99
 }
 
 let keys = Object.keys(myObj);
 // stores object keys in temp array
 
 for (let item of keys) {
-   console.log(`${item}: ${myObj[item]}`);
+    console.log(`${item}: ${myObj[item]}`);
 }
 // for or => returns values in object
 
@@ -202,8 +202,8 @@ for (let item of keys) {
 let count = 0;
 
 while (count < 5) {
-   console.log(count);
-   count++
+    console.log(count);
+    count++
 }
 
 // 0, 1, 2 ,3, 4
@@ -211,19 +211,52 @@ while (count < 5) {
 // closing condition is met
 
 do {
-   console.log(count);
-   count++;
+    console.log(count);
+    count++;
 } while (count < 5);
 
 // 5
 // do/while: always runs once
 
 while(true) {
-   count++;
-   if(count === 3) continue;
-   console.log(count);
-   if(count >= 5) break;
+    count++;
+    if(count === 3) continue;
+    console.log(count);
+    if(count >= 5) break;
 }
 
 // incrementor should come before continue
 // to avoid inifinite loop
+
+///////////////////////////////
+// type casting and coercion
+///////////////////////////////
+
+let x = "3";
+// let y = Number(x) + 5;
+let y = parseInt(x) + 5;
+y = parseFloat(x) + 5;
+
+alert(y);
+
+
+let x2 = "3.2abc";
+alert(Number(x)); //Nan
+// attempts to resolve whole value
+alert(parseInt(x)); //3
+// parses Int
+alert(parseFloat(x)); // 3.2
+// parses Float
+
+//////////////////////////
+// using Prompt to get user feedback
+////////////////////////////
+
+let y2 = prompt("Please say something.");
+let z2 = parseInt(y2);
+alert(`you said "${z2 + 100}"`);
+
+let y3 = parseFloat(prompt("Please enter a number"));
+alert(y3 + 100);
+
+
