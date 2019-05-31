@@ -163,3 +163,67 @@ let v = Singleton.getInstance();
 let z = Singleton.getInstance();
 v.luckyNumber = 33;
 alert(z.luckyNumber);
+
+
+///////////////////////////////
+// for of vs. for in loops
+///////////////////////////////
+
+let myArr = [55, 65, 75, 85];
+
+for (let item of myArr) {
+   console.log(item); // 55, 65, 75, 85
+}
+
+// for of => values of array constructor
+
+for (let item in myArr) {
+   console.log(item); // 0, 1, 2, 3
+}
+
+// for in => indexes/keys/methods in an array
+
+let myObj = {
+   name: "tony",
+   age: 99
+}
+
+let keys = Object.keys(myObj);
+// stores object keys in temp array
+
+for (let item of keys) {
+   console.log(`${item}: ${myObj[item]}`);
+}
+// for or => returns values in object
+
+// name: "tony"
+// age: 99
+
+let count = 0;
+
+while (count < 5) {
+   console.log(count);
+   count++
+}
+
+// 0, 1, 2 ,3, 4
+// while continues iteration until
+// closing condition is met
+
+do {
+   console.log(count);
+   count++;
+} while (count < 5);
+
+// 5
+// do/while: always runs once
+
+while(true) {
+   count++;
+   if(count === 3) continue;
+   console.log(count);
+   if(count >= 5) break;
+}
+
+// incrementor should come before continue
+// to avoid inifinite loop
