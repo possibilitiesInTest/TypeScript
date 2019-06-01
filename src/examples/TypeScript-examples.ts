@@ -405,3 +405,25 @@ interface B {
 type Person2 = A & B;
 // type Person2 = A | B;
 let stony: Person2;
+
+//////////////////////////////////////////////////////
+// noImplicitAny flag
+// allows compiler to recognize type, even when
+// not declared
+// :: union types are safer than using type: any
+//////////////////////////////////////////////////////
+
+// let x;
+
+let x: string | number | boolean;
+
+typeof (x);
+
+x = "hello";
+typeof (x);
+
+x = 33;
+typeof (x);
+
+x = true;
+typeof (x);
