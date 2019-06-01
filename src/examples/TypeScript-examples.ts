@@ -366,3 +366,21 @@ let test: Strnum | boolean;
 test = true;
 test = "hello";
 test = 345;
+
+/////////////////////////////////////////////////////
+//  use strictNullCheck, union type: null, and type guard
+///////////////////////////////////////////////////////
+
+let x: number | null;
+
+x = 2;
+
+x = null;
+
+if (x === null) {
+    x = 0;
+}
+
+
+x.toString();
+console.log(x)
