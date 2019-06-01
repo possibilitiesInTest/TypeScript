@@ -335,3 +335,34 @@ function prisoner2(...a: [string, string, number]): void {
 }
 
 prisoner2(...someArray2);
+
+//////////////////////////////////////////////
+// Using union types isntead of type: any
+/////////////////////////////////////////////
+
+// let x: any;
+
+let x: number | string | boolean;
+
+x = "hello";
+x = true;
+x = 33;
+x = {};
+x = () => { };
+x = [];
+
+
+type Strnum = string | number;
+
+let abc: Strnum;
+let y: Strnum;
+
+abc = "hello";
+abc = 33;
+y = "world"
+y = 1234;
+
+let test: Strnum | boolean;
+test = true;
+test = "hello";
+test = 345;
