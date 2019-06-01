@@ -273,3 +273,65 @@ let myString = JSON.stringify(myObject, null);
 
 alert(myString);
 
+////////////////////////////////////
+// Tuple is a finite ordered list
+///////////////////////////////////
+
+let x: [string, boolean];
+
+x[0] = "Married";
+x[1] = true;
+
+type mytup = [string, boolean];
+
+let y4: mytup;
+let z4: mytup;
+
+y4[0] = "Student";
+y4[1] = true;
+
+z4[0] = "Member";
+z4[1] = false;
+
+let captive: [string, string, number];
+
+captive[0] = "Tony"
+captive[1] = "Consul";
+captive[2] = 12345;
+
+////////////////////////////////////////////
+// Spread operator and deconstructing arrays into arguments
+////////////////////////////////////////////
+
+// function prisoner(a: string, b: string, c: number): void {
+//    console.log("Prisoner: ",a,b,c)
+// }
+
+function prisoner(...a: [string, string, number]): void {
+    console.log("Prisoner: ", a[0], a[1], a[2]);
+}
+// paramater a is of type array, expecting string, string, number
+// in the body each item of array is logged when the function is called
+// rest param is bound to exactly 3 arguments
+
+prisoner("Tony", "Consul", 1234);
+// calls the function w. passed in arguments
+// Prisoner: Tony Consul 1234
+
+type ssn = [string, string, number];
+let someArray: ssn = ["Tony", "Consul", 1234];
+
+prisoner(...someArray);
+// spread operator unpacks array into arguments
+
+type ssn2 = [string, string[], ...number[]];
+// rest element must be last element, and an array
+let someArray2: ssn2 = ["Tony2", ["Consul2", "Centurion2"], 1234, 2, 67];
+
+function prisoner2(...a: [string, string, number]): void {
+    for (let i of a) {
+        console.log(i);
+    }
+}
+
+prisoner2(...someArray2);
