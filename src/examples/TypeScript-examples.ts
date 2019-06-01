@@ -384,3 +384,24 @@ if (x === null) {
 
 x.toString();
 console.log(x)
+
+let x: number;
+let y = x;
+
+/////////////////////////////////////////////////////////
+// combining types w. union intersection
+/////////////////////////////////////////////////////////
+
+interface A {
+    gender: string;
+    name: string;
+}
+
+interface B {
+    age: number;
+    name: number;
+}
+
+type Person2 = A & B;
+// type Person2 = A | B;
+let stony: Person2;
