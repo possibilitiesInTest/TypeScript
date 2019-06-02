@@ -468,3 +468,27 @@ let otherList = propLister2("male", true);
 
 console.log(someList);
 console.log(otherList);
+
+
+// interface generics are independent from function generics
+// best practice: declare interface return type in function signature
+
+interface IProps <T3, T4> {
+    prop1: T3,
+    prop2: T4
+}
+
+function propLister3<T1,T2>(value1: T1, value2: T2): IProps<T1, T2> {
+
+    let myList: IProps<T1, T2> = {
+        prop1: value1,
+        prop2: value2
+    };
+    return myList;
+}
+
+let someList = propLister3("age", 33);
+let otherList = propLister3("male", true);
+
+console.log(someList);
+console.log(otherList);
