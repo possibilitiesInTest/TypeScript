@@ -449,3 +449,22 @@ propLister("hello", true);
 // Value hello is a string
 // Value true is a boolean
 
+
+// Generic types improve on type: any by recognizing
+// types of passed args
+function propLister2<T1,T2>(value1: T1, value2: T2) {
+
+    let myList = {
+        prop1: value1,
+        prop2: value2
+    };
+    return myList;
+}
+
+
+let someList = propLister2("age", 33);
+let otherList = propLister2("male", true);
+
+
+console.log(someList);
+console.log(otherList);
