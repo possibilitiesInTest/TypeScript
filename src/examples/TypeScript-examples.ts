@@ -427,3 +427,25 @@ typeof (x);
 
 x = true;
 typeof (x);
+
+//////////////////////////////////////////////////////
+//  Generic Types
+/////////////////////////////////////////////////////
+
+function propLister<T1,T2>(value1: T1, value2: T2) {
+// generic types can be used as independent placeholders
+// until the args are declared at invocation
+
+    console.log(`Value ${value1} is a ${typeof (value1)}`);
+    console.log(`Value ${value2} is a ${typeof (value2)}`)
+}
+
+
+propLister("age", 33);
+propLister("hello", true);
+
+// Value age is a string
+// Value 33 is a number
+// Value hello is a string
+// Value true is a boolean
+
