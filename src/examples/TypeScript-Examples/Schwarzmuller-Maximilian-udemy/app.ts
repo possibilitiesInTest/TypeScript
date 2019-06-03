@@ -63,3 +63,34 @@ let userData2: { name: string, age: number} = {
     age: 27
 };
 // explicit type assertion w. object
+
+
+///////////////////////////////////////////////////
+// using type alias to store complex types
+
+// complex object
+let complex: { data: number[], output: (all: boolean) => number[] } = {
+    // complex object
+    data: [100, 3.99, 10],
+    // data property
+    output: function (all: boolean): number[] {
+        return this.data;
+        // output property
+    }
+};
+
+complex = {};
+// simple instantiation does not
+// satisfy complex type
+
+// type alias
+
+type Complex = { data: number[], output: (all: boolean) => number[] };
+
+let complex2: Complex = {
+    data: [100, 3.99, 10],
+
+    output: function (all: boolean): number[] {
+        return this.data;
+    }
+};
