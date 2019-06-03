@@ -46,3 +46,20 @@ let myMultiply: (a: number, b: number) => number;
 myMultiply = sayHello; // does not satisfy function type
 myMultiply = multiply;
 console.log(myMultiply(5, 3));
+
+// objects
+let userData = {
+    name: "Max",
+    age: 27
+};
+userData = {
+    a: "Max",
+    b: 22
+}
+// property names are immutable when asserting an object type
+
+let userData2: { name: string, age: number} = {
+    name: "Max",
+    age: 27
+};
+// explicit type assertion w. object
