@@ -94,3 +94,29 @@ let complex2: Complex = {
         return this.data;
     }
 };
+
+// checking types
+let finalValue = "A String";
+if(typeof finalValue == "number") {
+    console.log("Final value is a number");
+};
+
+// never types
+function neverReturns(): never {
+    throw new Error('An error!');
+};
+// never returning anything
+// throws error before completion
+
+
+// Nullable Types
+let canBeNull: number | null = 12; // inferred type: number
+canBeNull = null; // reassigns type
+let canAlsoBeNull; // by default undefined (uninitialized)
+canAlsoBeNull = null; // call be assigned null thereafter
+// strictNullChecks: type null cannot be assigned to type number
+let canThisBeAny = nulll;
+// no error when assigning null at instantiation
+canThisBeAny = 12
+// type number cannot be reassigned to type: number
+
