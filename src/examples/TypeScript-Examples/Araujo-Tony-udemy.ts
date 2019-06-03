@@ -492,3 +492,33 @@ let otherList = propLister3("male", true);
 
 console.log(someList);
 console.log(otherList);
+
+////////////////////////////////////////////////////
+// type assetions
+////////////////////////////////////////////////////
+
+declare let foo;
+// ambient declaration
+
+foo = "hello";
+// sets foo to type string
+
+let x = <number>foo;
+// asserts foo as type number
+// not type check after type assertion
+
+alert(`${x} of type ${typeof (x)}`);
+// hello of type string
+
+x = 33;
+alert(`${x} of type ${typeof (x)}`);
+// 33 of type number
+
+let foo2;
+let y = foo2 as string;
+// use of 'as' for type assertion
+y = "Habari";
+
+alert(`${y} of type ${typeof (y)}`);
+console.log(`${y} of type ${typeof (y)}`);
+
