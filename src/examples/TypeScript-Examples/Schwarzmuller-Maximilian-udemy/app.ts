@@ -20,3 +20,23 @@ enum Color {
 
 let myColor: Color = Color.Green;
 console.log(myColor);
+
+// functions
+const myName = "Bob";
+
+function returnMyName(): string {
+    return myName;
+}
+console.log(returnMyName);
+
+// void
+function sayHello(): void {
+    console.log("Hello!")
+};
+
+// arg types
+function multiply(value1: number, value2: number): number {
+    return value1 * value2;
+};
+console.log(multiply(2, "Bob"));
+// won't work
