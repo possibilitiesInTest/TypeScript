@@ -39,4 +39,10 @@ function multiply(value1: number, value2: number): number {
     return value1 * value2;
 };
 console.log(multiply(2, "Bob"));
-// won't work
+// won't work\
+
+// function types
+let myMultiply: (a: number, b: number) => number;
+myMultiply = sayHello; // does not satisfy function type
+myMultiply = multiply;
+console.log(myMultiply(5, 3));
