@@ -1,1 +1,3 @@
-console.log("It works!")
+"use strict";
+var hobbies = ["Cooking", "Sports"];
+hobbies = [100];
