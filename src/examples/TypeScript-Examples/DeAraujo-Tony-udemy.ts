@@ -555,3 +555,26 @@ tournament.series.push(4);
 // can modify array in object
 // asserted as const
 
+////////////////////////////////////////////////////
+// Decorators
+///////////////////////////////////////////////////
+
+function myDecorator(target) {
+    alert(target);
+}
+
+
+// @decorator tells compiler to
+// run func w. same name
+// when class is processed
+@myDecorator
+class myClass {
+    name: string = "Tony";
+    age: number = 99;
+}
+
+myDecorator(myClass);
+
+// allows addition of new features
+// at compilation
+
