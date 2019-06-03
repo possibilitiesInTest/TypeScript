@@ -522,3 +522,36 @@ y = "Habari";
 alert(`${y} of type ${typeof (y)}`);
 console.log(`${y} of type ${typeof (y)}`);
 
+///////////////////////////////////////////////////////
+// type assertion of consts
+///////////////////////////////////////////////////////
+
+// a const assumes the value it contains
+// on declaration, as its data type
+const x = [10, 12] as const;
+const authoer = {
+    fName: "Tony",
+    lName: "DeAraujo"
+} as const;
+
+
+// cannot alter vals after const assetion
+x[0] = 11;
+x.push[0];
+author.fName = "Mary";
+
+// asserting vars as consts
+// makes the vars' values immutable
+
+
+const matches = [1, 2, 3];
+
+const tournament = {
+    game: "chess",
+    series: matches
+} as const;
+
+tournament.series.push(4);
+// can modify array in object
+// asserted as const
+
