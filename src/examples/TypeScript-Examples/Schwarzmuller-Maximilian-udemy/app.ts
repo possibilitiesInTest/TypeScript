@@ -142,3 +142,19 @@ let myself: {name: string, bankAccount: BankAccount, hobbies: string[]} = {
 
 myself.bankAccount.deposit(3000);
 console.log(myself);
+
+////////////////////////////////////////////////
+//ccompiler options
+
+function controlMe(isTrue: boolean , somethingElse: boolean) {
+    let result: number;
+    if(isTrue) {
+        result = 12;
+    }
+    return result;
+}
+// w. stricNullChecks compiler determines if
+// var is used before assignment
+
+// w. noUnusedParameters: compiler checks if
+// if param is declared but never used
