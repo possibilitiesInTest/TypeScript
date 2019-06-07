@@ -158,3 +158,36 @@ function controlMe(isTrue: boolean , somethingElse: boolean) {
 
 // w. noUnusedParameters: compiler checks if
 // if param is declared but never used
+
+
+// DEFAULT PARAMETERS
+const countdown = (start: number = 10): void => {
+    console.log(start);
+    while(start > 0) {
+        start--;
+    }
+    console.log("Done!", start);
+};
+countdown();
+//////////////////////
+const countdown2 = (start: number = 10, end: number = start -5): void => {
+    console.log(start);
+    while(start > 0) {
+        start--;
+    }
+    console.log("Done!", start);
+};
+countdown2();
+//////////////////////
+const countdown3 = (end: number = start -5, start: number =10): void => {
+    console.log(start);
+    while(start > 0) {
+        start--;
+    }
+    console.log("Done!", start);
+};
+countdown3();
+////////////////////////////////////
+
+
+
