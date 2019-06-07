@@ -212,3 +212,15 @@ function printInfo(name: string, age: number) {
 function printInfo2(...info: [string, number]) {
     console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
 }
+
+////////////////////////////////
+//  Destructuring
+///////////////////////////////
+const myHobbies = ["Cooking", "Sports"];
+const [hobby1, hobby2] = myHobbies;
+console.log(myHobbies[0], myHobbies[1]);
+
+const userData3 = {userName: "Max", age: 27};
+const {userName: myName2, age: myAge} = userData3;
+console.log(myName2, myAge);
+
