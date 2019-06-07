@@ -190,4 +190,25 @@ countdown3();
 ////////////////////////////////////
 
 
+///////////////////////////////////
+// Rest & Spread
+//////////////////////////////////
+const numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3));
+console.log(Math.max(...numbers));
 
+// rest operator: take any number of args and make
+// them of type number array
+function makeArray(name: string, ...args: number[]) {
+    return args;
+}
+console.log(makeArray("Max", 1, 2));
+
+// rest operator w. typles
+function printInfo(name: string, age: number) {
+    console.log('My name is ' + name + ' and I am ' + age + ' years old!');
+}
+
+function printInfo2(...info: [string, number]) {
+    console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
+}
