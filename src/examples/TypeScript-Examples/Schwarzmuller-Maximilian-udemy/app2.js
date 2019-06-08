@@ -39,7 +39,11 @@ var Max = /** @class */ (function (_super) {
     __extends(Max, _super);
     //name = "Max";
     function Max(username) {
-        return _super.call(this, "Max", username) || this;
+        var _this = _super.call(this, "Max", username) || this;
+        _this.age = 31;
+        return _this;
+        // console.log(this.type);
+        // cannot access private properties
     }
     return Max;
 }(Person));
@@ -47,3 +51,31 @@ var Max = /** @class */ (function (_super) {
 //const max = new Max("Anna", "max");
 var max = new Max("max");
 console.log(max);
+// Getters && Setters
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this._species = "Default";
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._species = value;
+            }
+            else {
+                this._species = "Default";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plant = new Plant();
+console.log(plant.species);
+plant.species = "AB";
+console.log(plant.species);
+plant.species = "Green plant";
+console.log(plant.species);
