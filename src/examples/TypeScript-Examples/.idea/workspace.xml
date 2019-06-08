@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467a28b1-5e46-43d9-99a0-269c50bc4d9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,16 +20,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
-              <caret line="291" column="21" lean-forward="true" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+              <caret line="291" column="15" selection-start-line="291" selection-start-column="15" selection-end-line="291" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -45,23 +70,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/tsconfig.json" />
-        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.ts" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts.js" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="62" />
-    <option name="width" value="835" />
-    <option name="height" value="740" />
+    <option name="x" value="47" />
+    <option name="y" value="23" />
+    <option name="width" value="706" />
+    <option name="height" value="779" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -82,12 +102,6 @@
               <item name="TypeScript-Examples" type="b2602c69:ProjectViewProjectNode" />
               <item name="TypeScript-Examples" type="462c0819:PsiDirectoryNode" />
               <item name="Schwarzmuller-Maximilian-udemy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TypeScript-Examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TypeScript-Examples" type="462c0819:PsiDirectoryNode" />
-              <item name="Schwarzmuller-Maximilian-udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="app.ts" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -127,15 +141,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560004017501</updated>
-      <workItem from="1560004019038" duration="4524000" />
+      <workItem from="1560004019038" duration="5039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4524000" />
+    <option name="totallyTimeSpent" value="5039000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="62" width="835" height="740" extended-state="0" />
+    <frame x="47" y="23" width="706" height="779" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -143,10 +157,10 @@
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35308954" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27108434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" weight="0.34104937" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3287037" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.31004366" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.3287037" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -203,17 +217,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
-          <caret line="291" column="21" lean-forward="true" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+          <caret line="291" column="15" selection-start-line="291" selection-start-column="15" selection-end-line="291" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
