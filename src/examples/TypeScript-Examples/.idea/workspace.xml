@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467a28b1-5e46-43d9-99a0-269c50bc4d9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+            <state relative-caret-position="562">
+              <caret line="122" column="21" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -79,7 +80,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="47" />
     <option name="y" value="23" />
-    <option name="width" value="652" />
+    <option name="width" value="609" />
     <option name="height" value="779" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -140,15 +141,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560004017501</updated>
-      <workItem from="1560004019038" duration="7615000" />
+      <workItem from="1560004019038" duration="7943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7615000" />
+    <option name="totallyTimeSpent" value="7943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="23" width="652" height="779" extended-state="0" />
+    <frame x="47" y="23" width="609" height="779" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -233,8 +234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        <state relative-caret-position="562">
+          <caret line="122" column="21" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
         </state>
       </provider>
     </entry>
