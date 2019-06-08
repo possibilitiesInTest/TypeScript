@@ -4,7 +4,7 @@ hobbies = [100];
 // setting array type to any overrides
 // implicit type inference by ts
 // tuples
-// let address: [number, string] = ["Super Street", 99];
+var address = ["Super Street", 99];
 // order in type declaration is important
 // enum
 // :: type restricting variables to values from
@@ -46,10 +46,10 @@ var userData = {
     name: "Max",
     age: 27
 };
-//  userData = {
-//     a: "Max",
-//     b: 22
-// }
+userData = {
+    a: "Max",
+    b: 22
+};
 // property names are immutable when asserting an object type
 var userData2 = {
     name: "Max",
@@ -68,6 +68,7 @@ var complex = {
         // output property
     }
 };
+complex = {};
 var complex2 = {
     data: [100, 3.99, 10],
     output: function (all) {
@@ -111,15 +112,15 @@ myself.bankAccount.deposit(3000);
 console.log(myself);
 ////////////////////////////////////////////////
 //compiler options
-// function controlMe(isTrue: boolean , somethingElse: boolean) {
-//     let result: number;
-//     if(isTrue) {
-//         result = 12;
-//     }
-//     return result;
-// }
-// w. strictNullChecks compiler determines if
-// var is used before assignment
+function controlMe(isTrue, somethingElse) {
+    var result;
+    if (isTrue) {
+        result = 12;
+    }
+    return result;
+}
+//w. strictNullChecks compiler determines if
+//var is used before assignment
 // w. noUnusedParameters: compiler checks if
 // if param is declared but never used
 // DEFAULT PARAMETERS
@@ -144,23 +145,25 @@ var countdown2 = function (start, end) {
 };
 countdown2();
 //////////////////////
-// const countdown3 = (end: number = start -5, start: number =10): void => {
-// // initializer of parameter 'end' cannot reference
-//     // identifier ''start' decalred after it
-//     console.log(start);
-//     while(start > 0) {
-//         start--;
-//     }
-//     console.log("Done!", start);
-// };
-// countdown3();
+var countdown3 = function (end, start) {
+    if (end === void 0) { end = start - 5; }
+    if (start === void 0) { start = 10; }
+    // initializer of parameter 'end' cannot reference
+    // identifier ''start' decalred after it
+    console.log(start);
+    while (start > 0) {
+        start--;
+    }
+    console.log("Done!", start);
+};
+countdown3();
 ////////////////////////////////////
 ///////////////////////////////////
 // Rest & Spread
 //////////////////////////////////
-var numbers = [1, 10, 99, -5];
+var numbers0 = [1, 10, 99, -5];
 console.log(Math.max(33, 99, 10, -3));
-console.log(Math.max.apply(Math, numbers));
+console.log(Math.max.apply(Math, numbers0));
 // rest operator: take any number of args and make
 // them of type number array
 function makeArray(name) {
@@ -219,14 +222,15 @@ var numbers3 = [-3, 33, 38, 5];
 console.log(Math.min.apply(Math, numbers3));
 //////////////////////////////////////////
 var numbers4 = [-3, 33, 38, 5];
-console.log(Math.min.apply(Math, numbers));
+console.log(Math.min.apply(Math, numbers4));
 // Exercise 4 - I have to think about Exercise 3 ...
-var newArray = [55, 20];
-Array.prototype.push.apply(newArray, numbers);
-console.log(newArray);
+var newArray2 = [55, 20];
+Array.prototype.push.apply(newArray2, numbers3);
+console.log("newArray2", newArray2);
 /////////////////////////////////////////////////
-newArray.push.apply(newArray, numbers);
-console.log(newArray);
+var newArray3 = [55, 20];
+newArray3.push.apply(newArray3, numbers4);
+console.log("newArray3", newArray3);
 // Exercise 5 - That's a well-constructed array.
 var testResults = [3.89, 2.99, 1.38];
 var result1 = testResults[0];
@@ -234,9 +238,15 @@ var result2 = testResults[1];
 var result3 = testResults[2];
 console.log(result1, result2, result3);
 ////////////////////////////////////////////////
+var testResults2 = [3.89, 2.99, 1.38];
+var res1 = testResults2[0], res2 = testResults2[1], res3 = testResults2[2];
+console.log.apply(console, testResults2);
 // Exercise 6 - And a well-constructed object!
 var scientist = { firstName: "Will", experience: 12 };
 var firstName = scientist.firstName;
 var experience = scientist.experience;
 console.log(firstName, experience);
 ////////////////////////////////////////////////
+var scientist2 = { firstName2: "William", experience2: 13 };
+var fN2 = scientist2.firstName2, e2 = scientist2.experience2;
+console.log(fN2, e2);
