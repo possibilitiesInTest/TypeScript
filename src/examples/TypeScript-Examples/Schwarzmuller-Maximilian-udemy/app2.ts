@@ -26,3 +26,21 @@ console.log(person);
 console.log(person.username, person.name);
 person.printAge();
 // person.setType("Cool guy");
+
+
+// Inheritance
+class Max extends Person {
+    //name = "Max";
+
+    constructor(username: string) {
+        super("Max", username);
+        this.age = 31;
+        // console.log(this.type);
+        // cannot access private properties
+
+    }
+};
+
+//const max = new Max("Anna", "max");
+const max = new Max("max");
+console.log(max);
