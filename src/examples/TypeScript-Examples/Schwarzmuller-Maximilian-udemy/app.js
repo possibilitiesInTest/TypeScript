@@ -1,3 +1,4 @@
+"use strict";
 // array
 var hobbies = ["Cooking", "Sports"];
 hobbies = [100];

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467a28b1-5e46-43d9-99a0-269c50bc4d9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/circleMath.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/rectangleMath.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +28,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/circleMath.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/rectangleMath.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -34,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="210">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -68,6 +89,8 @@
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts.js" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/tsconfig.json" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.ts" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/circleMath.ts" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/rectangleMath.ts" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts" />
       </list>
@@ -137,12 +160,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560004017501</updated>
-      <workItem from="1560004019038" duration="10372000" />
+      <workItem from="1560004019038" duration="11028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10372000" />
+    <option name="totallyTimeSpent" value="11028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="609" height="779" extended-state="0" />
@@ -186,6 +209,9 @@
       <list>
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app.js" />
         <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app2.js" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.js" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/circleMath.js" />
+        <option value="$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/rectangleMath.js" />
       </list>
     </option>
   </component>
@@ -221,13 +247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -235,10 +254,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/rectangleMath.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/circleMath.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Schwarzmuller-Maximilian-udemy/app3.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

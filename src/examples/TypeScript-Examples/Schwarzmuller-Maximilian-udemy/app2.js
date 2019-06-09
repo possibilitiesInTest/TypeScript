@@ -1,3 +1,4 @@
+"use strict";
 ////////////////////
 // Using Classes To Create Objects
 var __extends = (this && this.__extends) || (function () {
