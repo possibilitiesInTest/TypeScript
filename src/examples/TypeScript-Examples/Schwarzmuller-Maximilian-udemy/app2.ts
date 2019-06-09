@@ -263,3 +263,4 @@ console.log(person2.firstName);
 // console.log(person.firstName);
 // person2.firstName = "Maximilian";
 // console.log(person.firstName);
+
