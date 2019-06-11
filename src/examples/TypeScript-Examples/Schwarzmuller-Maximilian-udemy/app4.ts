@@ -1,4 +1,4 @@
-// Interfaces
+// Interfaces && Generics
 
 interface NamedPerson {
     firstName: string;
@@ -30,10 +30,10 @@ const person4: NamedPerson = {
 }
 // creates const person w. set internavl vals
 
-greet3(person4);
+// greet3(person4);
 changeName(person4);
-greet3(person4);
-person4.greet("Anything");
+// greet3(person4);
+// person4.greet("Anything");
 
 // greet3({firstName: "Max", age:27 });
 // err: object literal may only pass named properties
@@ -51,8 +51,8 @@ class Person5 implements NamedPerson {
 const myPerson = new Person5();
 myPerson.firstName = "Maximilian";
 myPerson.lastName = "Anything";
-greet3(myPerson);
-myPerson.greet("Anything");
+// greet3(myPerson);
+// myPerson.greet("Anything");
 
 // Function Types
 
@@ -65,7 +65,7 @@ myDoubleFunction = function(value1: number, value2: number) {
     return (value1 + value2) * 2;
 };
 
-console.log(myDoubleFunction(10, 20));
+// console.log(myDoubleFunction(10, 20));
 
 // Interface Inheritance
 
@@ -81,4 +81,8 @@ const oldPerson: AgedPerson = {
     }
 };
 
-console.log(oldPerson);
+// console.log(oldPerson);
+
+////////////////////////////////////////
+// Generics
+
