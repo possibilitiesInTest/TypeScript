@@ -33,10 +33,23 @@ const person4: NamedPerson = {
 greet3(person4);
 changeName(person4);
 greet3(person4);
+person4.greet("Anything");
 
 // greet3({firstName: "Max", age:27 });
 // err: object literal may only pass named properties
 // age does not exist in type NamedPerson
 // resolved w. optional arguments
 
-person4.greet("Anything");
+class Person5 implements NamedPerson {
+    firstName: string = "";
+    lastName: string = "";
+    greet(lastName: string) {
+        console.log("Hi, I am " + this.firstName + " " + lastName);
+    };
+}
+// classes can also be used to implement interfaces
+const myPerson = new Person5();
+myPerson.firstName = "Maximilian";
+myPerson.lastName = "Anything";
+greet3(myPerson);
+myPerson.greet("Anything");

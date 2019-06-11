@@ -22,8 +22,25 @@ var person4 = {
 greet3(person4);
 changeName(person4);
 greet3(person4);
+person4.greet("Anything");
 // greet3({firstName: "Max", age:27 });
 // err: object literal may only pass named properties
 // age does not exist in type NamedPerson
 // resolved w. optional arguments
-person4.greet("Anything");
+var Person5 = /** @class */ (function () {
+    function Person5() {
+        this.firstName = "";
+        this.lastName = "";
+    }
+    Person5.prototype.greet = function (lastName) {
+        console.log("Hi, I am " + this.firstName + " " + lastName);
+    };
+    ;
+    return Person5;
+}());
+// classes can also be used to implement interfaces
+var myPerson = new Person5();
+myPerson.firstName = "Maximilian";
+myPerson.lastName = "Anything";
+greet3(myPerson);
+myPerson.greet("Anything");
