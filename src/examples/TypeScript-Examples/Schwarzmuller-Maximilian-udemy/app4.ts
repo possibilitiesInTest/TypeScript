@@ -2,6 +2,9 @@
 
 interface NamedPerson {
     firstName: string;
+    age?: number;
+    [propName: string]: any;
+    // flexible keyName: of type: of type any
 }
 // creates interface for NamedPerson
 
@@ -17,11 +20,18 @@ function changeName(person: NamedPerson) {
 // and sets new value
 
 const person4 = {
-    name: "Max",
-    age: 27
+    firstName: "Max",
+    age: 27,
+    hobbies: ["Cooking", "Sports"]
 }
 // creates const person w. set internavl vals
 
-greet3(person4); //
-changeName(person4); //
-greet(person4); //
+greet3(person4);
+changeName(person4);
+greet3(person4);
+
+greet3({firstName: "Max", age:27 });
+// err: object literal may only pass named properties
+// age does not exist in type NamedPerson
+
+// resolved w. optional arguments
