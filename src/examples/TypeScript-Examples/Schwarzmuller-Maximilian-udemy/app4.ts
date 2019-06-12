@@ -105,9 +105,37 @@ console.log(betterEcho<number>(27));
 console.log(betterEcho({name: "Max", age: 27}));
 
 // Built-in Generics
-const testResults: Array<number> = [1.94, 2.33];
-testResults.push(-2.99);
-testResults.puhs("string");
+const testResults3: Array<number> = [1.94, 2.33];
+testResults3.push(-2.99);
+testResults3.push("string");
 // will fail
-console.log(testResults);
+console.log(testResults3);
 
+// Arrays
+function printAll<T>(args: T[]) {
+    args.forEach((element) => console.log(element));
+};
+printAll<string>(["Apple", "Banana"]);
+
+// Generic Types
+const echo3:<T>(data: T) => T = betterEcho;
+// of type generic & function
+// data as an input, return this type
+
+//everything after : before = is a type assertion
+console.log(echo3<string>("Something"));
+
+// Generic Class
+class SimpleMath<T extends number | string, U extends number | string> {
+    baseValue: T;
+    multiplyValue: U;
+    calculate(): number {
+        return +this.baseValue * +this.multiplyValue;
+        // +explicitly cast values to a number
+    }
+}
+
+const simpleMath = new SimpleMath<string, number>();
+simpleMath.baseValue = "10";
+simpleMath.multiplyValue = 20;
+console.log(simpleMath.calculate());
