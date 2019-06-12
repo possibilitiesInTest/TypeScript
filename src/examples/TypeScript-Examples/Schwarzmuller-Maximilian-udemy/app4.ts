@@ -103,3 +103,11 @@ function betterEcho<T>(data: T){
 console.log(betterEcho("Max").length);
 console.log(betterEcho<number>(27));
 console.log(betterEcho({name: "Max", age: 27}));
+
+// Built-in Generics
+const testResults: Array<number> = [1.94, 2.33];
+testResults.push(-2.99);
+testResults.puhs("string");
+// will fail
+console.log(testResults);
+
