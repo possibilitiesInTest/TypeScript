@@ -101,5 +101,84 @@ var SimpleMath = /** @class */ (function () {
 }());
 var simpleMath = new SimpleMath();
 simpleMath.baseValue = "10";
-simpleMath.multiplyValue = "20";
+simpleMath.multiplyValue = 20;
 console.log(simpleMath.calculate());
+//////////////////////////////////////////////////////
+// setItem(key: string, item: T) // should create a new key-value pair
+// getItem(key: string) // should retrieve the value of the provided key
+// clear() // should remove all key-value pairs
+// printMap() // should output key-value pairs
+// The map should be usable like shown below:
+// const numberMap = new MyMap<number>();
+// numberMap.setItem('apples', 5);
+// numberMap.setItem('bananas', 10);
+// numberMap.printMap();
+//
+// const stringMap = new MyMap<string>();
+// stringMap.setItem('name', "Max");
+// stringMap.setItem('age', "27");
+// stringMap.printMap();
+//////////////////////////////////////////////////
+var MyMap = /** @class */ (function () {
+    function MyMap() {
+        // create class MyMap w. generic type
+        this.map = {};
+        // create printMap w. for in loop
+        // log key and value in map
+    }
+    // create private property map for internal storage
+    // of type object with key of type string
+    // value stored for this key is of the generic type
+    // set to empty object
+    MyMap.prototype.setItem = function (key, item) {
+        this.map[key] = item;
+    };
+    // create setItem method which allows storage of new key:value pairs
+    // takes a key of type string, and item of generic type T
+    // accesses map. and sets key value pair to new item
+    // via overwriting
+    MyMap.prototype.getItem = function (key) {
+        return this.map[key];
+    };
+    // create getItem method specified w. key of type string
+    // return this.map accessing passed in key
+    MyMap.prototype.clear = function () {
+        this.map() = {};
+    };
+    // create clear method
+    // setting this.map to empty key
+    MyMap.prototype.printMap = function () {
+        for (var key in this.map) {
+            console.log(key, this.map[key]);
+        }
+    };
+    return MyMap;
+}());
+var numberMap = new MyMap();
+// creates numberMap where only generic type of numbers
+// can be stored
+numberMap.setItem("apples", 10);
+numberMap.setItem("bananas", 2);
+// sets items of key type string and key val number
+console.log(numberMap.getItem("apples"));
+// maps number of apples
+numberMap.printMap();
+// prints all key vals
+numberMap.clear();
+// clears map
+numberMap.printMap();
+// prints empty map
+var stringMap = new MyMap();
+// creates numberMap where only generic type of strings
+// can be stored
+stringMap.setItem("apples", "10");
+stringMap.setItem("bananas", "2");
+// sets items of key type string and key val string
+console.log(stringMap.getItem("apples"));
+// maps string val of key apples
+stringMap.printMap();
+// prints all key vals
+stringMap.clear();
+// clears map
+stringMap.printMap();
+// prints empty map
