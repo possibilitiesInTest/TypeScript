@@ -19,6 +19,20 @@ function logging(value: boolean) {
 }
 
 @logging(true)
-class Car {
+class Car {}
 
+// Advanced
+function printable(constructorFn: Function) {
+    constructorFn.prototype.print = function() {
+        console.log(this);
+    }
 }
+
+@printable
+class Plant2 {
+    name = "green Plant";
+}
+const plant2 = new Plant2();
+(<any>plant2).print();
+// must cast explicitly to type any
+
