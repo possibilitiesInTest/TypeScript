@@ -50,8 +50,18 @@ function editable(value: boolean) {
         // property is writbale
     }
 }
+// Property Decorator
+function overwritable(value:boolean) {
+    return function(target: any, propName: string): any {
+        const newDescriptor: PropertyDescriptor = {
+            writable: value
+        };
+        return newDescriptor;
+    }
+}
 
 class Project2 {
+    @overwritable(false)
     projectName: string;
 
     constructor(name: string) {
@@ -70,3 +80,6 @@ project2.calcBudget = function() {
     console.log(2000);
 };
 project2.calcBudget();
+console.log(project2);
+
+
