@@ -13,6 +13,8 @@ class Person3 {
 // attached decorator
 // will print constructor of this class
 
+////////////////////////////////////////
+
 // Factory
 function logging(value: boolean) {
     return value ? logged : null;
@@ -38,3 +40,33 @@ const plant2 = new Plant2();
 (<any>plant2).print();
 // must cast explicitly to type any
 
+//////////////////////////////////////////
+
+// Method Decorator
+function editable(value: boolean) {
+    return function(target: any, propName: string, descriptor: PropertyDescriptor ) {
+        descriptor.writable = value;
+        // user can control whether or not
+        // property is writbale
+    }
+}
+
+class Project2 {
+    projectName: string;
+
+    constructor(name: string) {
+        this.projectName = name;
+    }
+
+    @editable(false) // not writable property
+    calcBudget() {
+        console.log(1000);
+    }
+}
+
+const project2 = new Project2("Super Project");
+project2.calcBudget();
+project2.calcBudget = function() {
+    console.log(2000);
+};
+project2.calcBudget();
