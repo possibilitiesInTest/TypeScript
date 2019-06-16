@@ -12,3 +12,13 @@ class Person3 {
 }
 // attached decorator
 // will print constructor of this class
+
+// Factory
+function logging(value: boolean) {
+    return value ? logged : null;
+}
+
+@logging(true)
+class Car {
+
+}
