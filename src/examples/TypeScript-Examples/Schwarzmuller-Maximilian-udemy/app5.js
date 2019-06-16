@@ -43,10 +43,12 @@ var Plant2 = /** @class */ (function () {
         this.name = "green Plant";
     }
     Plant2 = __decorate([
+        logging(true),
         printable
     ], Plant2);
     return Plant2;
 }());
+;
 var plant2 = new Plant2();
 plant2.print();
 // must cast explicitly to type any

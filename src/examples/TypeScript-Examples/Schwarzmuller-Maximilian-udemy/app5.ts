@@ -28,10 +28,12 @@ function printable(constructorFn: Function) {
     }
 }
 
+@logging(true)
 @printable
 class Plant2 {
     name = "green Plant";
-}
+};
+
 const plant2 = new Plant2();
 (<any>plant2).print();
 // must cast explicitly to type any
