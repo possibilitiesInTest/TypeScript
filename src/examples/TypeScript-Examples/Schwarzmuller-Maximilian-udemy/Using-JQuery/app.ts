@@ -1,5 +1,5 @@
 // declare var $: any;
 
-$('button').click(function() {
+$('button').on("click", function() {
     alert('Button was clicked!')
 })
