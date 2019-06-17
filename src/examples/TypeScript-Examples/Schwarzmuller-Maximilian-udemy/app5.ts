@@ -1,6 +1,6 @@
 // Decorators
 
-function logged(constructorFn: Function) {
+function logged(constructorFn: Function): void{
     console.log(constructorFn);
 }
 
@@ -16,7 +16,7 @@ class Person3 {
 ////////////////////////////////////////
 
 // Factory
-function logging(value: boolean) {
+function logging(value: boolean): any {
     return value ? logged : null;
 }
 
@@ -24,7 +24,7 @@ function logging(value: boolean) {
 class Car {}
 
 // Advanced
-function printable(constructorFn: Function) {
+function printable(constructorFn: Function): void {
     constructorFn.prototype.print = function() {
         console.log(this);
     }
