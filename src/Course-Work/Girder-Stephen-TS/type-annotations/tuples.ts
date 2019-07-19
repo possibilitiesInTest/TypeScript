@@ -7,7 +7,7 @@ const drink = {
 const pop: [string, boolean, number] = ['brown', true, 40]
 // type declaration creates tuple
 // safeguards order of types
-pop[0] = 40;
+// pop[0] = 40;
 
 
 type Drink = [string, boolean, number]
