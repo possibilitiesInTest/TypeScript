@@ -1,3 +1,14 @@
+import User from './User';
+import Company from './Company';
+
+interface Mappable {
+    location: {
+        lat: number,
+        lng: number
+    };
+}
+
+
 
 
 export class CustomMap {
@@ -12,5 +23,15 @@ export class CustomMap {
             }
         });
         
+    }
+
+    addMarker(mappable: Mappable) {
+        new google.maps.Marker({
+            map: this.googleMap,
+            position: {
+                lat: mappable.location.lat,
+                lng: mappable.location.lng
+            }
+        });
     }
 }
