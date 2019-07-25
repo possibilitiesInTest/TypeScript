@@ -1,7 +1,7 @@
-console.log('hu thoor');
+import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
 
-const logSomething = (text: string): void => {
-    console.log(text);
-}
-
-logSomething('words');
+const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
+const sorter = new Sorter(numbersCollection);
+sorter.sort();
+console.log(numbersCollection.data);
