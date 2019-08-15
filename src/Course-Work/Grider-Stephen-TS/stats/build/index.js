@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchReader_1 = require("./MatchReader");
 var CsvFileReader_1 = require("./CsvFileReader");
-// import { MatchResult } from "./MatchResult";
-var ConsoleReports_1 = require("./reportTargets/ConsoleReports");
-var WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
 var Summary_1 = require("./Summary");
 // inheritance implementation
 // const reader = new MatchReader("football.csv");
@@ -21,5 +18,5 @@ var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
 // the 'DataReader' interface
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
-var summary = new Summary_1.Summary(new WinsAnalysis_1.WinsAnalaysis('Man United'), new ConsoleReports_1.ConsoleReport());
+var summary = Summary_1.Summary.winsAnalysisWithHtmlReport('Man United');
 summary.buildAndPrintReport(matchReader.matches);

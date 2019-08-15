@@ -2,8 +2,9 @@ import { MatchReader } from "./MatchReader";
 import { CsvFileReader } from './CsvFileReader';
 // import { MatchResult } from "./MatchResult";
 import { ConsoleReport } from './reportTargets/ConsoleReports';
-import { WinsAnalaysis } from './analyzers/WinsAnalysis';
+import { WinsAnalysis } from './analyzers/WinsAnalysis';
 import { Summary } from './Summary';
+import { HtmlReport } from './reportTargets/HtmlReport';
 
 // inheritance implementation
 // const reader = new MatchReader("football.csv");
@@ -26,9 +27,6 @@ const csvFileReader = new CsvFileReader('football.csv')
 const matchReader = new MatchReader(csvFileReader);
 matchReader.load();
 
-const summary = new Summary(
-  new WinsAnalaysis('Man United'),
-  new ConsoleReport()
-);
+const summary = Summary.winsAnalysisWithHtmlReport('Man United');
 
 summary.buildAndPrintReport(matchReader.matches);
