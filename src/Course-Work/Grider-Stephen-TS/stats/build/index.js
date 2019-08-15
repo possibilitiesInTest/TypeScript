@@ -1,8 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchReader_1 = require("./MatchReader");
-var CsvFileReader_1 = require("./CsvFileReader");
+// import { CsvFileReader } from './CsvFileReader';
+// import { MatchResult } from "./MatchResult";
+// import { ConsoleReport } from './reportTargets/ConsoleReports';
+// import { WinsAnalysis } from './analyzers/WinsAnalysis';
 var Summary_1 = require("./Summary");
+// import { HtmlReport } from './reportTargets/HtmlReport';
 // inheritance implementation
 // const reader = new MatchReader("football.csv");
 // reader.read();
@@ -13,10 +17,12 @@ var Summary_1 = require("./Summary");
 // console.log(`Man United won ${manUnitedWins} games`);
 // object composition implementation
 // create an object that satisfies the 'DataReader' interface
-var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
+// const csvFileReader = new CsvFileReader('football.csv')
 // create an instance of Matchreader and pass in something satisfying
 // the 'DataReader' interface
-var matchReader = new MatchReader_1.MatchReader(csvFileReader);
-matchReader.load();
+// const matchReader = new MatchReader(csvFileReader);
+// matchReader.load();
+var matchReader = MatchReader_1.MatchReader.fromCsv('football.csv');
 var summary = Summary_1.Summary.winsAnalysisWithHtmlReport('Man United');
+matchReader.load();
 summary.buildAndPrintReport(matchReader.matches);
