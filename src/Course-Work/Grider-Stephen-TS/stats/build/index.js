@@ -2,22 +2,24 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchReader_1 = require("./MatchReader");
 var CsvFileReader_1 = require("./CsvFileReader");
-var MatchResult_1 = require("./MatchResult");
+// import { MatchResult } from "./MatchResult";
+var ConsoleReports_1 = require("./reportTargets/ConsoleReports");
+var WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
+var Summary_1 = require("./Summary");
 // inheritance implementation
 // const reader = new MatchReader("football.csv");
 // reader.read();
 // interface implementation
+// const csvFileReader = new CsvFileReader('football.csv')
+// const matchReader = new MatchReader(csvFileReader);
+// matchReader.load();
+// console.log(`Man United won ${manUnitedWins} games`);
+// object composition implementation
+// create an object that satisfies the 'DataReader' interface
 var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
+// create an instance of Matchreader and pass in something satisfying
+// the 'DataReader' interface
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
-var manUnitedWins = 0;
-for (var _i = 0, _a = matchReader.matches; _i < _a.length; _i++) {
-    var match = _a[_i];
-    if (match[1] === "Man United" && match[5] === MatchResult_1.MatchResult.HomeWin) {
-        manUnitedWins++;
-    }
-    else if (match[2] === "Man United" && match[5] === MatchResult_1.MatchResult.AwayWin) {
-        manUnitedWins++;
-    }
-}
-console.log("Man United won " + manUnitedWins + " games");
+var summary = new Summary_1.Summary(new WinsAnalysis_1.WinsAnalaysis('Man United'), new ConsoleReports_1.ConsoleReport());
+summary.buildAndPrintReport(matchReader.matches);
